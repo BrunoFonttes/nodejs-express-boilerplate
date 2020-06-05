@@ -1,7 +1,7 @@
 
 const express = require('express')
 // const path = require('path')
-const hospitaisServices = require('../services/hospitaisService')
+const hospitalService = require('../services/hospitalService')
 
 class HospitalRoutes {
     constructor() {
@@ -11,7 +11,7 @@ class HospitalRoutes {
 
     routes() {
         this.app.get('/', (req, res) => {
-            const { calculadoraHospital } = hospitaisServices
+            const { calculadoraHospital } = hospitalService
             const soma = calculadoraHospital()
             const obj = {
                 helloworld: true,

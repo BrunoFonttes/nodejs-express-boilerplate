@@ -9,6 +9,7 @@ class Routes {
 
     routes(){
         this.app.use('/hospitais', require('./hospitalRoutes'))
+        this.app.use('/nlw', require('./nlwRoutes'))
     }
 }
 
